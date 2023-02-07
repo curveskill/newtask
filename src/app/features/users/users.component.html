@@ -1,0 +1,54 @@
+<!-- <form [formGroup] = "userform" (ngSubmit)="SaveEmployee()">
+    <div class="mb-3">
+    <label>identity</label>
+    <div class="input-group">
+        <input name="identity" class="form-control" formControlName = "identity">
+    </div>
+    </div>
+    <div class="mb-3">
+        <label>email</label>
+        <div class="input-group">
+            <input name="email" class="form-control" formControlName = "email">
+        </div>
+        </div>
+        <div class="mb-3">
+            <label>mobile</label>
+            <div class="input-group">
+                <input name="mobile" class="form-control" formControlName = "mobile">
+            </div>
+            </div>
+        <div class="mb-3">
+                <label>address</label>
+                <div class="input-group">
+                    <input name="address" class="form-control" formControlName = "address">
+                </div>
+                </div>
+    
+
+
+</form> -->
+<button type="button" class="btn btn-success btn-lg"  (click)="addNewItem()">Add New Item</button>
+<table border="1" align ="center">
+    <tr >
+        <th>id</th>
+        <th>name</th>
+        <th>email</th>
+        <th>number</th>
+        <th>gender</th>
+        <th>status</th>
+    </tr>
+    <tr *ngFor="let obj of users">
+        <td>{{obj.id}}</td>
+        <td>{{obj.name}}</td>
+        <td>{{obj.email}}</td>
+        <td>{{obj.number}}</td>
+        <td>{{obj.gender}}
+            <input type="radio" value="male" > Male
+            <input type="radio" value="female" > Female
+        </td>
+        <td>{{obj.status}}
+            <input type="checkbox" value="Active" required>active
+                    <input type="checkbox" value="InActive" required>inactive
+        </td>
+    </tr>
+</table>
